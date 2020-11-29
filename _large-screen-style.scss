@@ -82,16 +82,16 @@
 
     .first-section__img-container {
         position: relative;
-        right: -1rem;
-        width: 30%;
+        right: 0;
+        width: 50%;
         height: 36rem;
-        background-image: url(./images/bg-intro-desktop.svg);
-        background-position: 15% 50%;
+        background: right no-repeat url(./images/bg-intro-desktop.svg);
     }
 
     .first-section__img-container__img {
-        margin-top: -18%;
-        margin-left: 16%;
+        width: 65%;
+        height: auto;
+        margin: -20% 0 0 40%;
     }
 
 

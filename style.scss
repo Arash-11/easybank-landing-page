@@ -128,14 +128,11 @@ body {
     position: relative;
     right: -3rem;
     height: 33rem;
-    background-image: url(./images/bg-intro-desktop.svg);
-    background-position: 12% 60%;
-    background-repeat: no-repeat;
+    background: 12% 60% no-repeat url(./images/bg-intro-desktop.svg);
 }
 
 .first-section__img-container__img {
-    margin-top: -25%;
-    margin-left: 10%;
+    margin: -25% 0 0 10%;
 }
 
 
@@ -319,4 +316,4 @@ body {
 @import 'large-screen-style';
 @import 'mobile-style-1';
 @import 'mobile-style-2';
-@import 'mobile-style-3';
+@import 'tablet-style';
