@@ -1,0 +1,108 @@
+@media screen and (max-width: 350px) {
+
+    $padding-vertical-mobile-1: 4.5rem;
+    $padding-horizontal-mobile-1: 8vw;
+
+    %flex-row-mobile-1 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    %flex-column-mobile-1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .cta-btn {
+        appearance: none;
+        background: $lime-cyan-gradient;
+        padding: 0.7rem 2.3rem;
+        border-radius: 50px;
+        border: none;
+        font-size: 0.8rem;
+        color: white;
+        &:hover {
+            cursor: pointer;
+            opacity: 0.8;
+        }
+    }
+    
+    
+    // header & navbar --------------------------------------------------------------------------
+    .header {
+        @extend %flex-row-mobile-1;
+        justify-content: space-between;
+        height: 4rem;
+        padding: 0 $padding-horizontal-mobile-1;
+    }
+    
+    .header__nav {
+        @extend %flex-row-mobile-1;
+        justify-content: space-between;
+        width: 35%;
+    }
+    
+    .header__nav__link-outer {
+        padding: 1.4rem 0;
+        font-size: 0.8rem;
+    }
+    
+    .header__nav__link-inner {
+        padding: 1.4rem 0 1.2rem;
+    }
+
+    .header__btn {
+        display: none;
+    }
+
+
+    // first-section ---------------------------------------------------------------------------
+    .first-section {
+        @extend %flex-column-mobile-1;
+        margin-top: 4rem;
+        height: 33rem;
+        padding-left: 0;
+    }
+
+    .first-section__text-container {
+        width: 37%;
+        padding-left: $padding-horizontal-mobile-1;
+        order: 2;
+    }
+
+    .first-section__text-container__heading {
+        margin-bottom: 7%;
+        font-size: 2.8rem;
+    }
+
+    .first-section__text-container__text {
+        margin-bottom: 7%;
+        line-height: 1.5rem;
+    }
+
+    .first-section__img-container {
+        order: 1;
+        position: static;
+        // right: -3rem;
+        // right: 0;
+        top: 4rem;
+        width: 100vw;
+        height: 50rem;
+        background-image: url(./images/bg-intro-mobile.svg);
+        // background-position: 12% 60%;
+        background-position: center;
+        background-repeat: no-repeat;
+        border: solid 3px red;
+    }
+
+    .first-section__img-container__img {
+        margin-top: 3rem;
+        margin-left: 0;
+    }
+
+}

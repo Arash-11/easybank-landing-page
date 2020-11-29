@@ -1,4 +1,3 @@
-
 $dark-blue: hsl(233, 26%, 24%);
 $lime-green: hsl(136, 65%, 51%);
 $bright-cyan: hsl(192, 70%, 51%);
@@ -7,8 +6,8 @@ $light-grayish-blue: hsl(220, 16%, 96%);
 $very-light-gray: hsl(0, 0%, 98%);
 $lime-cyan-gradient: linear-gradient(to right, $lime-green, $bright-cyan);
 
-$padding-top: 4.5rem;
-$padding-side: 5.5rem;
+$padding-vertical: 4.5rem;
+$padding-horizontal: 8vw;
 $font-family: 'Public Sans', sans-serif;
 $body-font-size: 18px;
 
@@ -73,7 +72,7 @@ body {
     justify-content: space-between;
     width: 100%;
     height: 4rem;
-    padding: 0 $padding-side;
+    padding: 0 $padding-horizontal;
     background: white;
 }
 
@@ -101,10 +100,10 @@ body {
 // first-section ---------------------------------------------------------------------------
 .first-section {
     @extend %flex-row;
-    align-items: space-between;
+    justify-content: space-between;
     margin-top: 4rem;
     height: 33rem;
-    padding-left: $padding-side;
+    padding-left: $padding-horizontal;
     background: $very-light-gray;
 }
 
@@ -130,19 +129,19 @@ body {
     right: -3rem;
     height: 33rem;
     background-image: url(./images/bg-intro-desktop.svg);
-    background-position: 10% 60%;
-    border: solid 1px red;
+    background-position: 12% 60%;
+    background-repeat: no-repeat;
 }
 
 .first-section__img-container__img {
     margin-top: -25%;
-    margin-left: 16%;
+    margin-left: 10%;
 }
 
 
 // second-section ---------------------------------------------------------------------------
 .second-section {
-    padding: $padding-top $padding-side;
+    padding: $padding-vertical $padding-horizontal;
     background: $light-grayish-blue;
 }
 
@@ -189,7 +188,7 @@ body {
 
 // third-section ---------------------------------------------------------------------------
 .third-section {
-    padding: $padding-top $padding-side;
+    padding: $padding-vertical $padding-horizontal;
     background: $very-light-gray;
 }
 
@@ -212,23 +211,26 @@ body {
 }
 
 .third-section__articles__article__img {
-    margin-bottom: 1.5rem;
     width: 100%;
     height: 10rem;
     border-radius: 7px 7px 0 0;
 }
 
+.third-section__articles__article__wrapper {
+    padding: 1.1rem;
+    height: 13rem;
+}
+
 .third-section__articles__article__author {
-    margin: 0 1.5rem;
     color: $grayish-blue;
     font-size: 0.8rem;
 }
 
 .third-section__articles__article__title {
-    margin: 1rem 1.5rem;
+    margin: 0.7rem 0;
     color: $dark-blue;
     font-weight: 400;
-    font-size: 1.1rem;
+    font-size: 1rem;
     &:hover {
         cursor: pointer;
         color: $lime-green;
@@ -236,7 +238,6 @@ body {
 }
 
 .third-section__articles__article__text {
-    margin: 0 1.5rem 1.5rem;
     color: $grayish-blue;
     font-weight: 400;
     font-size: 0.8rem;
@@ -246,7 +247,7 @@ body {
 
 // footer -----------------------------------------------------------------------------
 .footer {
-    padding: 3rem $padding-side 2rem;
+    padding: 3rem $padding-horizontal 2rem;
     background: $dark-blue;
     @extend %flex-row;
     justify-content: space-between;
@@ -313,3 +314,9 @@ body {
     color: $grayish-blue;
     font-size: 0.8rem;
 }
+
+
+@import 'large-screen-style';
+@import 'mobile-style-1';
+@import 'mobile-style-2';
+@import 'mobile-style-3';
