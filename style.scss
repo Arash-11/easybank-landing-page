@@ -1,0 +1,315 @@
+
+$dark-blue: hsl(233, 26%, 24%);
+$lime-green: hsl(136, 65%, 51%);
+$bright-cyan: hsl(192, 70%, 51%);
+$grayish-blue: hsl(233, 8%, 62%);
+$light-grayish-blue: hsl(220, 16%, 96%);
+$very-light-gray: hsl(0, 0%, 98%);
+$lime-cyan-gradient: linear-gradient(to right, $lime-green, $bright-cyan);
+
+$padding-top: 4.5rem;
+$padding-side: 5.5rem;
+$font-family: 'Public Sans', sans-serif;
+$body-font-size: 18px;
+
+%flex-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+%flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: $font-family;
+    font-size: $body-font-size;
+}
+
+body {
+    overflow-x: hidden;
+    a {
+        text-decoration: none;
+        color: white;
+    }
+    li {
+        list-style: none;
+    }
+}
+
+.cta-btn {
+    appearance: none;
+    background: $lime-cyan-gradient;
+    padding: 0.7rem 2.3rem;
+    border-radius: 50px;
+    border: none;
+    font-size: 0.8rem;
+    color: white;
+    &:hover {
+        cursor: pointer;
+        opacity: 0.8;
+    }
+}
+
+
+// header & navbar --------------------------------------------------------------------------
+.header {
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    @extend %flex-row;
+    justify-content: space-between;
+    width: 100%;
+    height: 4rem;
+    padding: 0 $padding-side;
+    background: white;
+}
+
+.header__nav {
+    @extend %flex-row;
+    justify-content: space-between;
+    width: 35%;
+}
+
+.header__nav__link-outer {
+    padding: 1.4rem 0;
+    color: $grayish-blue;
+    font-size: 0.8rem;
+    &:hover {
+        background: $lime-cyan-gradient;
+    }
+}
+
+.header__nav__link-inner {
+    padding: 1.4rem 0 1.2rem;
+    background: white;
+}
+
+
+// first-section ---------------------------------------------------------------------------
+.first-section {
+    @extend %flex-row;
+    align-items: space-between;
+    margin-top: 4rem;
+    height: 33rem;
+    padding-left: $padding-side;
+    background: $very-light-gray;
+}
+
+.first-section__text-container {
+    width: 37%;
+}
+
+.first-section__text-container__heading {
+    margin-bottom: 7%;
+    color: $dark-blue;
+    font-weight: 400;
+    font-size: 2.8rem;
+}
+
+.first-section__text-container__text {
+    margin-bottom: 7%;
+    color: $grayish-blue;
+    line-height: 1.5rem;
+}
+
+.first-section__img-container {
+    position: relative;
+    right: -3rem;
+    height: 33rem;
+    background-image: url(./images/bg-intro-desktop.svg);
+    background-position: 10% 60%;
+    border: solid 1px red;
+}
+
+.first-section__img-container__img {
+    margin-top: -25%;
+    margin-left: 16%;
+}
+
+
+// second-section ---------------------------------------------------------------------------
+.second-section {
+    padding: $padding-top $padding-side;
+    background: $light-grayish-blue;
+}
+
+.second-section__heading {
+    width: 60%;
+    margin-bottom: 6%;
+}
+
+.second-section__heading__title {
+    margin-bottom: 3%;
+    color: $dark-blue;
+    font-weight: 400;
+    font-size: 1.7rem;
+}
+
+.second-section__heading__text {
+    color: $grayish-blue;
+    line-height: 1.5rem;
+}
+
+.second-section__cards {
+    @extend %flex-row;
+    justify-content: space-between;
+}
+
+.second-section__cards__card {
+    width: 23%;
+}
+
+.second-section__cards__card__title {
+    margin: 1.7rem 0;
+    color: $dark-blue;
+    font-weight: 400;
+    font-size: 1.2rem;
+}
+
+.second-section__cards__card__text {
+    color: $grayish-blue;
+    font-weight: 400;
+    font-size: 0.85rem;
+    line-height: 1.4rem;
+}
+
+
+// third-section ---------------------------------------------------------------------------
+.third-section {
+    padding: $padding-top $padding-side;
+    background: $very-light-gray;
+}
+
+.third-section__heading {
+    margin-bottom: 4%;
+    color: $dark-blue;
+    font-weight: 400;
+    font-size: 1.7rem;
+}
+
+.third-section__articles {
+    @extend %flex-row;
+    justify-content: space-between;
+}
+
+.third-section__articles__article {
+    width: 23%;
+    background: white;
+    border-radius: 7px;
+}
+
+.third-section__articles__article__img {
+    margin-bottom: 1.5rem;
+    width: 100%;
+    height: 10rem;
+    border-radius: 7px 7px 0 0;
+}
+
+.third-section__articles__article__author {
+    margin: 0 1.5rem;
+    color: $grayish-blue;
+    font-size: 0.8rem;
+}
+
+.third-section__articles__article__title {
+    margin: 1rem 1.5rem;
+    color: $dark-blue;
+    font-weight: 400;
+    font-size: 1.1rem;
+    &:hover {
+        cursor: pointer;
+        color: $lime-green;
+    }
+}
+
+.third-section__articles__article__text {
+    margin: 0 1.5rem 1.5rem;
+    color: $grayish-blue;
+    font-weight: 400;
+    font-size: 0.8rem;
+    line-height: 1.3rem;
+}
+
+
+// footer -----------------------------------------------------------------------------
+.footer {
+    padding: 3rem $padding-side 2rem;
+    background: $dark-blue;
+    @extend %flex-row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.footer__socials {
+    @extend %flex-column;
+    justify-content: space-between;
+    height: 5.5rem;
+}
+
+.footer__socials__logo > g > path {
+    fill: $light-grayish-blue;
+}
+
+.footer__socials__icons {
+    color: $light-grayish-blue;
+}
+
+.footer__socials__icons__icon {
+    margin: 0 0.3rem;
+    &:hover path{
+        fill: $lime-green;
+    }
+}
+
+.footer__links {
+    @extend %flex-row;
+    justify-content: space-between;
+    width: 25%;
+    margin-right: 15%;
+    color: $light-grayish-blue;
+    font-size: 0.8rem;
+    font-weight: 300;
+    height: 6rem;
+}
+
+.footer__links__group-1 {
+    li {
+        margin-bottom: 1.1rem;
+        &:hover a {
+            color: $lime-green;
+        }
+    }
+}
+
+.footer__links__group-2 {
+    li {
+        margin-bottom: 1.1rem;
+        &:hover a {
+            color: $lime-green;
+        }
+    }
+}
+
+.footer__cta {
+    @extend %flex-column;
+    justify-content: space-between;
+    height: 5rem;
+}
+
+.footer__cta__trademark {
+    color: $grayish-blue;
+    font-size: 0.8rem;
+}
