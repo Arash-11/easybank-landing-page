@@ -111,7 +111,6 @@ body button:hover {
 .header__nav__links__link-outer {
   padding: 1.4rem 0;
   color: #9698a6;
-  font-size: 0.8rem;
 }
 
 .header__nav__links__link-outer:hover {
@@ -122,6 +121,7 @@ body button:hover {
 .header__nav__links__link-inner {
   padding: 1.4rem 0 1.2rem;
   background: white;
+  font-size: 0.8rem;
 }
 
 .header__nav__mobile-menu {
@@ -821,7 +821,7 @@ body button:hover {
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
-    padding: 1rem 0;
+    padding: 1.1rem 0;
     border-radius: 10px;
     background: white;
     color: #2d314d;
@@ -831,6 +831,7 @@ body button:hover {
     text-align: center;
     padding: 0.8rem 0;
     color: #2d314d;
+    font-size: 0.9rem;
   }
   .header__nav__mobile-menu {
     display: inline-block;

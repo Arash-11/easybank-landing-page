@@ -96,7 +96,6 @@ body {
 .header__nav__links__link-outer {
     padding: 1.4rem 0;
     color: $grayish-blue;
-    font-size: 0.8rem;
     &:hover {
         background: $lime-cyan-gradient;
     }
@@ -105,6 +104,7 @@ body {
 .header__nav__links__link-inner {
     padding: 1.4rem 0 1.2rem;
     background: white;
+    font-size: 0.8rem;
 }
 
 .header__nav__mobile-menu {
