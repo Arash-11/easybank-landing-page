@@ -1,5 +1,9 @@
 # Frontend Mentor - Easybank landing page
 
+You can check the live site here: https://arash-11.github.io/easybank-landing-page/.
+
+<br />
+
 ![Design preview for the Easybank landing page coding challenge](./design/desktop-preview.jpg)
 
 ## Welcome! 👋
