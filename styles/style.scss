@@ -46,6 +46,14 @@ body {
     li {
         list-style: none;
     }
+    button {
+        appearance: none;
+        border: none;
+        background: transparent;
+        &:hover {
+            cursor: pointer;
+        }
+    }
 }
 
 .cta-btn {
@@ -77,12 +85,15 @@ body {
 }
 
 .header__nav {
-    @extend %flex-row;
-    justify-content: space-between;
     width: 35%;
 }
 
-.header__nav__link-outer {
+.header__nav__links {
+    @extend %flex-row;
+    justify-content: space-between;
+}
+
+.header__nav__links__link-outer {
     padding: 1.4rem 0;
     color: $grayish-blue;
     font-size: 0.8rem;
@@ -91,9 +102,26 @@ body {
     }
 }
 
-.header__nav__link-inner {
+.header__nav__links__link-inner {
     padding: 1.4rem 0 1.2rem;
     background: white;
+}
+
+.header__nav__mobile-menu {
+    display: none;
+}
+
+
+// overlay --------------------------------------------------------------------
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+    background-color: rgba(0,0,0,0.5);
 }
 
 
@@ -128,7 +156,7 @@ body {
     position: relative;
     right: -3rem;
     height: 33rem;
-    background: 12% 60% no-repeat url(./images/bg-intro-desktop.svg);
+    background: 12% 60% no-repeat url(../images/bg-intro-desktop.svg);
 }
 
 .first-section__img-container__img {
@@ -314,6 +342,5 @@ body {
 
 
 @import 'large-screen-style';
-@import 'mobile-style-1';
-@import 'mobile-style-2';
 @import 'tablet-style';
+@import 'mobile-style';
