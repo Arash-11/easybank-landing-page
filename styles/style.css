@@ -119,7 +119,7 @@ body button:hover {
 }
 
 .header__nav__links__link-inner {
-  padding: 1.4rem 0 1.2rem;
+  padding: 1.7rem 0 1.2rem;
   background: white;
   font-size: 0.8rem;
 }
@@ -357,7 +357,7 @@ body button:hover {
 }
 
 @media screen and (min-width: 3000px) {
-  .header, .header__nav, .first-section, .second-section__cards, .third-section__articles, .footer, .footer__links {
+  .header, .header__nav__links, .first-section, .second-section__cards, .third-section__articles, .footer, .footer__links {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -411,10 +411,12 @@ body button:hover {
     padding: 0 12vw;
   }
   .header__nav {
+    width: 30%;
+  }
+  .header__nav__links {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    width: 30%;
   }
   .header__nav__link-outer {
     padding: 2.1rem 0;

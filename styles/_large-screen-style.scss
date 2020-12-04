@@ -41,9 +41,12 @@
     }
 
     .header__nav {
+        width: 30%;
+    }
+
+    .header__nav__links {
         @extend %flex-row-large;
         justify-content: space-between;
-        width: 30%;
     }
 
     .header__nav__link-outer {
